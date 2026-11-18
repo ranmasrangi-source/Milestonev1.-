@@ -1,0 +1,23 @@
+{
+  "name": "pherinepal",
+  "private": true,
+  "version": "0.1.0",
+  "description": "PheriNepal - Nepal travel ecosystem (Milestone 1 foundation)",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @pherinepal/web",
+    "build": "npm run build -w @pherinepal/web",
+    "start": "npm run start -w @pherinepal/web",
+    "test": "npm run test -w @pherinepal/domain",
+    "typecheck": "npm run typecheck -w @pherinepal/domain && npm run typecheck -w @pherinepal/web",
+    "lint": "npm run typecheck",
+    "db:migrate": "npm run db:migrate -w @pherinepal/db",
+    "db:seed": "npm run db:seed -w @pherinepal/db"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  }
+}
